@@ -1,4 +1,5 @@
 <template>
+  <!-- milleks see siin vajalik on voi oli? -->
   <StudentsList title="Students list" />
 </template>
 

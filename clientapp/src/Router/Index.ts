@@ -7,7 +7,7 @@ const routes: Array<RouteRecordRaw> = [
     path: "/",
     name: "Student",
     component: StudentVue,
-    props: { title: "Student" },
+    props: { title: "University Students" },
   },
   {
     path: "/newstudent",
