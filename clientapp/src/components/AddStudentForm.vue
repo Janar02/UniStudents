@@ -35,16 +35,32 @@
               placeholder="Last Name"
             />
           </div>
-          <div>
+          <form>
+            <label for="sex">Sex</label>
+            <select
+              id="sex"
+              name="sex"
+              v-model="student.sex"
+              class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+              placeholder="Sex"
+            >
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+          </form>
+          <form>
             <label for="status">Status</label>
-            <input
+            <select
               id="status"
               name="status"
               v-model="student.status"
               class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
               placeholder="Status"
-            />
-          </div>
+            >
+              <option value="Aktiivne">Aktiivne</option>
+              <option value="Mitteaktiivne">Mitteaktiivne</option>
+            </select>
+          </form>
         </div>
         <div>
           <button
@@ -72,6 +88,7 @@ const student: Ref<Student> = ref({
   studentCode: "",
   firstName: "",
   lastName: "",
+  sex: "",
   status: "",
 });
 const { addStudent } = useStudentStore();
@@ -83,6 +100,7 @@ const submitForm = () => {
   student.value.studentCode = "";
   student.value.firstName = "";
   student.value.lastName = "";
+  student.value.sex = "";
   student.value.status = "";
   router.push({ name: "Student" }); //Kas Incomes on name-le õige väärtus?
 };

@@ -1,8 +1,7 @@
 <template>
   <div>
     {{ student.studentCode }} : {{ student.firstName }} :
-    {{ student.lastName }}:
-    {{ student.status }}
+    {{ student.lastName }}: {{ student.sex }}: {{ student.status }}:
   </div>
 </template>
 
