@@ -4,3 +4,7 @@ export interface Student {
   lastName: string;
   status: string;
 }
+
+export interface State {
+  students: Student[];
+}

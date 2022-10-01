@@ -11,16 +11,18 @@
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
               <router-link
                 to="/"
-                class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
+                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                active-class="bg-gray-900 text-white"
                 aria-current="page"
-                >Students</router-link
-              >
+                >Students
+              </router-link>
 
               <router-link
-                to="/newincome"
+                to="/newstudent"
                 class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                >Add Student</router-link
-              >
+                active-class="bg-gray-900 text-white"
+                >Add Student
+              </router-link>
             </div>
           </div>
         </div>
