@@ -35,6 +35,17 @@
               placeholder="Last Name"
             />
           </div>
+          <div>
+            <label for="dateOfBirth">Date of Birth</label>
+            <input
+              id="dateOfBirth"
+              name="dateOfBirth"
+              v-model="student.dateOfBirth"
+              class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+              placeholder="dateOfBirth"
+              type="Date"
+            />
+          </div>
           <form>
             <label for="sex">Sex</label>
             <select
@@ -85,11 +96,12 @@ import { ref, Ref } from "vue";
 import { useRouter } from "vue-router";
 
 const student: Ref<Student> = ref({
-  studentCode: "",
-  firstName: "",
-  lastName: "",
-  sex: "",
-  status: "",
+  studentCode: "1111111IABB",
+  firstName: "Test",
+  lastName: "Student",
+  dateOfBirth: new Date(2000, 10, 4),
+  sex: "Female",
+  status: "Aktiivne",
 });
 const { addStudent } = useStudentStore();
 const router = useRouter();
@@ -100,6 +112,7 @@ const submitForm = () => {
   student.value.studentCode = "";
   student.value.firstName = "";
   student.value.lastName = "";
+  student.value.dateOfBirth = new Date();
   student.value.sex = "";
   student.value.status = "";
   router.push({ name: "Student" }); //Kas Incomes on name-le õige väärtus?
